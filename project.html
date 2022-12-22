@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 | My Project</title>
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header -->
+    <header >
+        <nav>
+            <!--left -->
+            <div class="nav-left">
+                <a href="index.html">
+                    <a href="index.html"><img src="assets/images/brandred.png" width="70px" alt="logo brand"></a>
+                </a>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="project.html"  style="color:orangered;">Project</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- right -->
+            <div class="nav-right">
+                <a href="form.html">Contact Me</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="display: flex; justify-content:center; margin-top:5%;">ADD NEW PROJECT</h2>
+        <!-- PROJECT FORM -->
+        <section class="project-form">
+            <form class="project-input" id="project-input">
+                <div class="input">
+                    <label for="project-name">Project Name</label>
+                    <input type="text" id="project-name" placeholder="Masukkan Nama Project" required>
+                </div>
+                <div class="input-row">
+                    <div class="input">
+                        <label for="date-start">Start Date</label>
+                        <input type="date" id="date-start">
+                    </div>
+                    <div class="input">
+                        <label for="date-end">End Date</label>
+                        <input type="date" id="date-end">
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="project-description">Project Description</label>
+                    <textarea id="project-description" cols="30" rows="3" placeholder="Masukkan Deskripsi Project" required></textarea>
+                </div>
+                <div class="input-grid">
+                    <label>Technologies</label>
+                    <div class="input-checkbox">
+                        <label for="node-js">
+                            <input type="checkbox" id="node-js">
+                            Node JS
+                        </label>
+                        <label for="react-js">
+                            <input type="checkbox" id="react-js">
+                            React JS
+                        </label>
+                        <label for="next-js">
+                            <input type="checkbox" id="next-js">
+                            Next JS
+                        </label>
+                        <label for="typescript">
+                            <input type="checkbox" id="typescript">
+                            TypeScript
+                        </label>
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="upload-image">Upload Image</label>
+                    <input type="file" id="upload-image" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+
+        <!-- PROJECT LIST -->
+        <section class="project container-fluid">
+            <h2 style="font-weight: 600;">My Project</h2>
+            <div class="project-list" id="project-list">
+                
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/project.js"></script>
+</body>
+
+</html>
