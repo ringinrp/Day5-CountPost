@@ -14,6 +14,8 @@ const inputUseNextJS = document.getElementById("next-js");
 const inputUseTypeScript = document.getElementById("typescript");
 const inputUploadImage = document.getElementById("upload-image");
 
+
+//alert project berhasil dibuat
 document.addEventListener("DOMContentLoaded", () => {
     inputProject.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -88,12 +90,11 @@ const createProjectItem = (project) => {
     projectArticle.classList.add("project-item");
     projectArticle.setAttribute("id", `${id}`);
     projectArticle.innerHTML = `
-    <img src=${uploadImage} alt="">
+    <img src=${uploadImage} alt="gambar_upload">
     <div class="project-name">
         <a href="project-detail.html" target="_blank"><h3>${projectName}</h3></a>
         <div class="project-duration">
         <p>Durasi: ${getDurationTime(startDate, endDate)}</p>
-        <p>Dibuat: ${getCreationDate(startDate)}</p>
         </div>
     </div>
     <div class="project-description">
@@ -198,7 +199,7 @@ const deleteProject = (id) => {
         return;
     }
 
-    if (confirm("do you want to delete this project?") === true) {
+    if (confirm("Apakah kamu ingin menghapus project ini?") === true) {
         dataProject.splice(projectTarget, 1);
         document.dispatchEvent(new Event(RENDER_EVENT));
         saveData();
@@ -230,9 +231,9 @@ const getDurationTime = (startDate, endDate) => {
     if (projectDuration > 30) {
         // not calculate correctly
         calculateDuration = Math.round(projectDuration / 30);
-        durationTotal = `${calculateDuration} month(s)`;
+        durationTotal = `${calculateDuration} Bulan`;
     } else {
-        durationTotal = `${projectDuration} day(s)`;
+        durationTotal = `${projectDuration} Hari`;
     }
     return durationTotal;
 };
