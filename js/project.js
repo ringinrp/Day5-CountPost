@@ -15,7 +15,6 @@ const inputUseTypeScript = document.getElementById("typescript");
 const inputUploadImage = document.getElementById("upload-image");
 
 
-//alert project berhasil dibuat
 document.addEventListener("DOMContentLoaded", () => {
     inputProject.addEventListener("submit", (event) => {
         event.preventDefault();
