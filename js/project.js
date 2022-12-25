@@ -1,4 +1,5 @@
 const dataProject = [];
+
 const RENDER_EVENT = "render-project";
 const SAVED_EVENT = "saved-project";
 const STORAGE_KEY = "project-data";
@@ -190,6 +191,8 @@ const generateID = () => {
     return +new Date();
 };
 
+
+//Delete Post
 // delete project
 const deleteProject = (id) => {
     const projectTarget = findProjectIndex(id);
@@ -216,7 +219,11 @@ const findProjectIndex = (projectId) => {
 
     return null;
 };
+//Delete Post
 
+
+
+//Durasi Post yang dibuat
 // calculate duration
 const getDurationTime = (startDate, endDate) => {
     const date1 = new Date(startDate);
@@ -287,3 +294,4 @@ const editProject = (id) => {
 
     dataProject.splice(projectTarget, 1);
 };
+//Durasi Post yang dibuat
