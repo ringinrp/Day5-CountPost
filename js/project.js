@@ -15,7 +15,7 @@ const inputUseNextJS = document.getElementById("next-js");
 const inputUseTypeScript = document.getElementById("typescript");
 const inputUploadImage = document.getElementById("upload-image");
 
-
+//event button
 document.addEventListener("DOMContentLoaded", () => {
     inputProject.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -228,7 +228,7 @@ const findProjectIndex = (projectId) => {
 const getDurationTime = (startDate, endDate) => {
     const date1 = new Date(startDate);
     const date2 = new Date(endDate);
-    const diffDate = Math.abs(date2 - date1);
+    const diffDate = (date2 - date1);
     const projectDuration = Math.floor(diffDate / (1000 * 3600 * 24));
 
     let calculateDuration = "";
@@ -245,35 +245,35 @@ const getDurationTime = (startDate, endDate) => {
 };
 
 // generate creation date
-const getCreationDate = (startDate) => {
-    const dateCreation = new Date(startDate);
+// const getCreationDate = (startDate) => {
+//     const dateCreation = new Date(startDate);
 
-    let createdDate = dateCreation.getDate();
-    let createdMonth = dateCreation.getMonth();
-    let createdYear = dateCreation.getFullYear();
+//     let createdDate = dateCreation.getDate();
+//     let createdMonth = dateCreation.getMonth();
+//     let createdYear = dateCreation.getFullYear();
 
-    const arrayMonth = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ];
+//     const arrayMonth = [
+//         "January",
+//         "February",
+//         "March",
+//         "April",
+//         "June",
+//         "July",
+//         "August",
+//         "September",
+//         "October",
+//         "November",
+//         "December",
+//     ];
 
-    for (let i = 0; i < arrayMonth.length; i++) {
-        if (createdMonth - 1 === i) {
-            createdMonth = arrayMonth[i];
-        }
-    }
+//     for (let i = 0; i < arrayMonth.length; i++) {
+//         if (createdMonth - 1 === i) {
+//             createdMonth = arrayMonth[i];
+//         }
+//     }
 
-    return createdDate + " " + createdMonth + " " + createdYear;
-};
+//     return createdDate + " " + createdMonth + " " + createdYear;
+// };
 
 // edit project
 const editProject = (id) => {
